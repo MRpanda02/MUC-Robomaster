@@ -1,0 +1,162 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: moon DELL, 1, LIC=D0D7S-LKRX3-9UL4U-S0IJ5-JHCET-FW83D
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  E:\moon\KEIL5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.29.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+E:\moon\参北斗\C板程序\muc_demo\新建文件夹\MDK-ARM\usart.uvprojx
+Project File Date:  05/19/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\moon\KEIL5\ARM\ARMCC\Bin'
+Build target 'usart'
+compiling tim.c...
+../Inc/tim.h(33): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  extern TIM_HandleTypeDef htim1;
+../Inc/tim.h(34): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  extern TIM_HandleTypeDef htim8;
+../Inc/tim.h(43): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+..\Src\tim.c(27): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  TIM_HandleTypeDef htim1;
+..\Src\tim.c(28): error:  #20: identifier "TIM_HandleTypeDef" is undefined
+  TIM_HandleTypeDef htim8;
+..\Src\tim.c(33): error:  #20: identifier "TIM_ClockConfigTypeDef" is undefined
+    TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+..\Src\tim.c(34): error:  #20: identifier "TIM_MasterConfigTypeDef" is undefined
+    TIM_MasterConfigTypeDef sMasterConfig = {0};
+..\Src\tim.c(35): error:  #20: identifier "TIM_OC_InitTypeDef" is undefined
+    TIM_OC_InitTypeDef sConfigOC = {0};
+..\Src\tim.c(36): error:  #20: identifier "TIM_BreakDeadTimeConfigTypeDef" is undefined
+    TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
+..\Src\tim.c(40): error:  #20: identifier "TIM_COUNTERMODE_UP" is undefined
+    htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+..\Src\tim.c(42): error:  #20: identifier "TIM_CLOCKDIVISION_DIV1" is undefined
+    htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+..\Src\tim.c(44): error:  #20: identifier "TIM_AUTORELOAD_PRELOAD_DISABLE" is undefined
+    htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+..\Src\tim.c(45): warning:  #223-D: function "HAL_TIM_Base_Init" declared implicitly
+    if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+..\Src\tim.c(49): error:  #20: identifier "TIM_CLOCKSOURCE_INTERNAL" is undefined
+    sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+..\Src\tim.c(50): warning:  #223-D: function "HAL_TIM_ConfigClockSource" declared implicitly
+    if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+..\Src\tim.c(54): warning:  #223-D: function "HAL_TIM_PWM_Init" declared implicitly
+    if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
+..\Src\tim.c(58): error:  #20: identifier "TIM_TRGO_RESET" is undefined
+    sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+..\Src\tim.c(59): error:  #20: identifier "TIM_MASTERSLAVEMODE_DISABLE" is undefined
+    sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+..\Src\tim.c(60): warning:  #223-D: function "HAL_TIMEx_MasterConfigSynchronization" declared implicitly
+    if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+..\Src\tim.c(64): error:  #20: identifier "TIM_OCMODE_PWM1" is undefined
+    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+..\Src\tim.c(66): error:  #20: identifier "TIM_OCPOLARITY_HIGH" is undefined
+    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+..\Src\tim.c(67): error:  #20: identifier "TIM_OCNPOLARITY_HIGH" is undefined
+    sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+..\Src\tim.c(68): error:  #20: identifier "TIM_OCFAST_DISABLE" is undefined
+    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+..\Src\tim.c(69): error:  #20: identifier "TIM_OCIDLESTATE_RESET" is undefined
+    sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+..\Src\tim.c(70): error:  #20: identifier "TIM_OCNIDLESTATE_RESET" is undefined
+    sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+..\Src\tim.c(71): warning:  #223-D: function "HAL_TIM_PWM_ConfigChannel" declared implicitly
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+..\Src\tim.c(71): error:  #20: identifier "TIM_CHANNEL_1" is undefined
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+..\Src\tim.c(75): warning:  #223-D: function "HAL_TIM_PWM_ConfigChannel" declared implicitly
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+..\Src\tim.c(75): error:  #20: identifier "TIM_CHANNEL_2" is undefined
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+..\Src\tim.c(79): warning:  #223-D: function "HAL_TIM_PWM_ConfigChannel" declared implicitly
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+..\Src\tim.c(79): error:  #20: identifier "TIM_CHANNEL_3" is undefined
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+..\Src\tim.c(83): warning:  #223-D: function "HAL_TIM_PWM_ConfigChannel" declared implicitly
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+..\Src\tim.c(83): error:  #20: identifier "TIM_CHANNEL_4" is undefined
+    if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+..\Src\tim.c(87): error:  #20: identifier "TIM_OSSR_DISABLE" is undefined
+    sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
+..\Src\tim.c(88): error:  #20: identifier "TIM_OSSI_DISABLE" is undefined
+    sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
+..\Src\tim.c(89): error:  #20: identifier "TIM_LOCKLEVEL_OFF" is undefined
+    sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
+..\Src\tim.c(91): error:  #20: identifier "TIM_BREAK_DISABLE" is undefined
+    sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
+..\Src\tim.c(92): error:  #20: identifier "TIM_BREAKPOLARITY_HIGH" is undefined
+    sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
+..\Src\tim.c: 8 warnings, 30 errors
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling can.c...
+compiling main.c...
+compiling gpio.c...
+compiling usart.c...
+compiling stm32f4xx_it.c...
+compiling stm32f4xx_hal_can.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling bsp_can.c...
+compiling CAN_receive.c...
+compiling pid.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_uart.c...
+"usart\usart.axf" - 30 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_usart
+  E:\moon\KEIL5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  E:\moon\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Target not created.
+Build Time Elapsed:  00:00:16
+</pre>
+</body>
+</html>

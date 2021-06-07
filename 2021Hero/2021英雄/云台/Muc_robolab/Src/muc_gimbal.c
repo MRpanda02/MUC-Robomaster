@@ -73,7 +73,7 @@ void EncoderProcess(volatile Encoder *v, uint8_t *msgData)
 	{
 		v->ecd_raw_rate = v->diff;
 	}
-	
+
 
 	//计算得到连续的编码器输出值
 	v->ecd_value = v->raw_value + v->round_cnt * 8192;
