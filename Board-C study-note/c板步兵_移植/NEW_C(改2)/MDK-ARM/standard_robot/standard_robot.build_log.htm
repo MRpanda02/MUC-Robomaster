@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: moon DELL, 1, LIC=D0D7S-LKRX3-9UL4U-S0IJ5-JHCET-FW83D
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  E:\moon\KEIL5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+E:\moon\MUC-Robomaster\Board-C study-note\c°å²½±ø_ÒÆÖ²\NEW_C(¸Ä2)\MDK-ARM\standard_robot.uvprojx
+Project File Date:  09/05/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\moon\KEIL5\ARM\ARMCC\Bin'
+Build target 'standard_robot'
+compiling muc_hardware_beep.c...
+..\Hardware\Src\muc_hardware_beep.c(6): error:  #20: identifier "htim12" is undefined
+  	HAL_TIM_PWM_Start(&htim12, TIM_CHANNEL_1); 
+..\Hardware\Src\muc_hardware_beep.c: 0 warnings, 1 error
+compiling muc_timer.c...
+..\Muc_robolab\Src\muc_timer.c(13): error:  #20: identifier "htim14" is undefined
+      __HAL_TIM_SET_COUNTER(&htim14,1);
+..\Muc_robolab\Src\muc_timer.c: 0 warnings, 1 error
+compiling muc_main_task.c...
+..\Muc_robolab\Inc\muc_imu.h(22): warning:  #1295-D: Deprecated declaration MucImuInit - give arg types
+  void MucImuInit();
+..\Muc_robolab\Inc\muc_imu.h(23): warning:  #1295-D: Deprecated declaration ImuAnalysisTask - give arg types
+  void ImuAnalysisTask();
+..\Muc_robolab\Src\muc_main_task.c(82): error:  #20: identifier "htim14" is undefined
+  	HAL_TIM_Base_Start(&htim14);
+..\Muc_robolab\Src\muc_main_task.c(85): error:  #20: identifier "htim6" is undefined
+  	HAL_TIM_Base_Start_IT(&htim6); //
+..\Muc_robolab\Src\muc_main_task.c(135): warning:  #111-D: statement is unreachable
+  					break;
+..\Muc_robolab\Src\muc_main_task.c(182): warning:  #1-D: last line of file ends without a newline
+  }
+..\Muc_robolab\Src\muc_main_task.c: 4 warnings, 2 errors
+"standard_robot\standard_robot.axf" - 4 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_standard_robot
+  E:\moon\KEIL5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  E:\moon\KEIL5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Target not created.
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
